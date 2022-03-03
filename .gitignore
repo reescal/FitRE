@@ -1,0 +1,6 @@
+/src/.vs/
+/src/**/.vscode/
+/src/**/bin/
+/src/**/obj/
+/src/*.sln.DotSettings.user
+/src/**/*.csproj.user
