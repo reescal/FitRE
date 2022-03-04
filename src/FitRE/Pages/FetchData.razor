@@ -1,5 +1,6 @@
 ﻿@page "/fetchdata"
-@inject HttpClient Http
+@using FitRE.Infrastructure
+@inject IWeatherForecastService weatherForecastService
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -27,7 +28,7 @@ else
             {
                 <tr>
                     <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.Temperature</td>
                     <td>@forecast.TemperatureF</td>
                     <td>@forecast.Summary</td>
                 </tr>
@@ -37,21 +38,21 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private IEnumerable<WeatherForecast> forecasts = new List<WeatherForecast>();
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        forecasts = await weatherForecastService.Get();
     }
 
     public class WeatherForecast
     {
         public DateTime Date { get; set; }
 
-        public int TemperatureC { get; set; }
+        public int Temperature { get; set; }
 
         public string? Summary { get; set; }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public int TemperatureF => 32 + (int)(Temperature / 0.5556);
     }
 }
