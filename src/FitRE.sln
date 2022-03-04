@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitRE", "FitRE\FitRE.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitRE.Tests", "FitRE.Tests\FitRE.Tests.csproj", "{C79458FE-5A5F-4642-942C-FACCCFBB9E5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitRE.API", "FitRE.API\FitRE.API.csproj", "{C40C399F-E118-4F7A-B437-071217C84B2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitRE.Shared", "FitRE.Shared\FitRE.Shared.csproj", "{80501C0C-BF59-42F9-9177-346890E42D5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C79458FE-5A5F-4642-942C-FACCCFBB9E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C79458FE-5A5F-4642-942C-FACCCFBB9E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C79458FE-5A5F-4642-942C-FACCCFBB9E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40C399F-E118-4F7A-B437-071217C84B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40C399F-E118-4F7A-B437-071217C84B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40C399F-E118-4F7A-B437-071217C84B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40C399F-E118-4F7A-B437-071217C84B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80501C0C-BF59-42F9-9177-346890E42D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80501C0C-BF59-42F9-9177-346890E42D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80501C0C-BF59-42F9-9177-346890E42D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80501C0C-BF59-42F9-9177-346890E42D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
