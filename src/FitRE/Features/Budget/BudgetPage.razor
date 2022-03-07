@@ -1,0 +1,33 @@
+﻿@page "/budget"
+@using FitRE.Infrastructure
+@inject IBudgetService _budgetService
+
+<PageTitle>Budget</PageTitle>
+
+<h1>Budget</h1>
+
+@if (_budget == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @if (_budget.Id == Guid.Empty)
+    {
+        <p>Create new budget.</p>
+    }
+    else
+    {
+        <p>@_budget.Amount</p>
+    }
+}
+
+@code {
+    private Budget? _budget;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _budget = await _budgetService.Get(Guid.NewGuid().ToString());
+        _budget ??= new Budget();
+    }
+}
