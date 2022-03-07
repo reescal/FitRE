@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
+    <ProjectReference Include="..\FitRE.Shared\FitRE.Shared.csproj" />
   </ItemGroup>
 
 </Project>
